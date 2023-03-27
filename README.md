@@ -1,16 +1,4 @@
-# bank_sha
+# E-Wallet
 
-A new Flutter project.
+<img width="2314" alt="Group 9" src="https://user-images.githubusercontent.com/41983828/227841185-cbcedd8b-069e-4d93-a55c-0b9547c402a6.png">
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
