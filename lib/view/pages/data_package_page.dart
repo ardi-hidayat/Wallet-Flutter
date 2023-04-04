@@ -12,7 +12,7 @@ class DataPackagePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Paket Data'),
+        title: const Text('Paket Data'),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24),

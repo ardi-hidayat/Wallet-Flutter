@@ -18,7 +18,7 @@ class HomeServiceItem extends StatelessWidget {
           Container(
             width: 70,
             height: 70,
-            margin: EdgeInsets.only(bottom: 8),
+            margin: const EdgeInsets.only(bottom: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: whiteColor,

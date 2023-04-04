@@ -58,14 +58,14 @@ class TransferResultUserItem extends StatelessWidget {
                   )
                 : null,
           ),
-          SizedBox(
+          const SizedBox(
             height: 13,
           ),
           Text(
             name,
             style: blackTextStyle.copyWith(fontSize: 16, fontWeight: medium),
           ),
-          SizedBox(
+          const SizedBox(
             height: 2,
           ),
           Text(
