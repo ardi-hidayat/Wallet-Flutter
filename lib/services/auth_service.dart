@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:bank_sha/models/sign_in_form_model.dart';
-import 'package:bank_sha/models/sign_up_form_model.dart';
+import 'package:bank_sha/models/request/sign_in_form_model.dart';
+import 'package:bank_sha/models/request/sign_up_form_model.dart';
 import 'package:bank_sha/models/user_model.dart';
 import 'package:bank_sha/shared/shared_values.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';

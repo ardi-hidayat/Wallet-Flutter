@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:bank_sha/blocs/auth/auth_bloc.dart';
-import 'package:bank_sha/models/sign_up_form_model.dart';
+import 'package:bank_sha/models/request/sign_up_form_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';

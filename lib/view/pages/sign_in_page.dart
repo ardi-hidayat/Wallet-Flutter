@@ -1,5 +1,5 @@
 import 'package:bank_sha/blocs/auth/auth_bloc.dart';
-import 'package:bank_sha/models/sign_in_form_model.dart';
+import 'package:bank_sha/models/request/sign_in_form_model.dart';
 import 'package:bank_sha/shared/theme.dart';
 import 'package:bank_sha/view/widgets/buttons.dart';
 import 'package:bank_sha/view/widgets/forms.dart';

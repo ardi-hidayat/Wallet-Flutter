@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:bank_sha/models/sign_up_form_model.dart';
+import 'package:bank_sha/models/request/sign_up_form_model.dart';
 import 'package:bank_sha/shared/shared_methods.dart';
 import 'package:bank_sha/view/pages/sign_up_set_ktp_page.dart';
 import 'package:flutter/material.dart';
