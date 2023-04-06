@@ -1,7 +1,7 @@
 import 'package:bank_sha/models/request/sign_in_form_model.dart';
 import 'package:bank_sha/models/request/sign_up_form_model.dart';
 import 'package:bank_sha/models/request/user_edit_form_model.dart';
-import 'package:bank_sha/models/user_model.dart';
+import 'package:bank_sha/models/response/user_model.dart';
 import 'package:bank_sha/services/auth_service.dart';
 import 'package:bank_sha/services/user_service.dart';
 import 'package:bank_sha/services/wallet_service.dart';
