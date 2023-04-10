@@ -130,6 +130,7 @@ class AuthService {
     if (value != null) {
       token = 'Bearer $value';
     }
+    print(token);
     return token;
   }
 
