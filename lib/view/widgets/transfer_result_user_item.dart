@@ -1,20 +1,27 @@
 import 'package:bank_sha/shared/theme.dart';
 import 'package:flutter/material.dart';
 
-class TransferResultUserItem extends StatelessWidget {
-  final String imageUrl;
-  final String name;
-  final String username;
-  final bool isVerified;
-  final bool isSelected;
+import '../../models/response/user_model.dart';
 
+class TransferResultUserItem extends StatelessWidget {
+  final UserModel user;
+  final bool isSelected;
   const TransferResultUserItem(
-      {super.key,
-      required this.imageUrl,
-      required this.name,
-      required this.username,
-      this.isVerified = false,
-      this.isSelected = false});
+      {super.key, required this.user, this.isSelected = false});
+
+  // final String imageUrl;
+  // final String name;
+  // final String username;
+  // final bool isVerified;
+  // final bool isSelected;
+
+  // const TransferResultUserItem(
+  //     {super.key,
+  //     required this.imageUrl,
+  //     required this.name,
+  //     required this.username,
+  //     this.isVerified = false,
+  //     this.isSelected = false});
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +43,12 @@ class TransferResultUserItem extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
-                image: AssetImage(imageUrl),
+                image: user.profilePicture == null
+                    ? const AssetImage('assets/img_profile.png')
+                    : NetworkImage(user.profilePicture!) as ImageProvider,
               ),
             ),
-            child: isVerified
+            child: user.verified == 1
                 ? Align(
                     alignment: Alignment.topRight,
                     child: Container(
@@ -62,14 +71,14 @@ class TransferResultUserItem extends StatelessWidget {
             height: 13,
           ),
           Text(
-            name,
+            user.name.toString(),
             style: blackTextStyle.copyWith(fontSize: 16, fontWeight: medium),
           ),
           const SizedBox(
             height: 2,
           ),
           Text(
-            '@$username',
+            '@${user.username}',
             style: greyTextStyle.copyWith(fontSize: 12),
           ),
         ],
