@@ -4,6 +4,7 @@ import 'package:bank_sha/models/request/data_plan_form_model.dart';
 import 'package:bank_sha/models/request/top_up_form_model.dart';
 import 'package:bank_sha/models/request/transfer_form_model.dart';
 import 'package:bank_sha/models/response/data_plan_model.dart';
+import 'package:bank_sha/models/response/transaction_model.dart';
 import 'package:bank_sha/services/auth_service.dart';
 import 'package:bank_sha/shared/shared_values.dart';
 import 'package:http/http.dart' as http;
@@ -55,6 +56,25 @@ class TransactionService {
       if (res.statusCode != 200) {
         throw jsonDecode(res.body)['message'];
       }
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<List<TransactionModel>> getTransactions() async {
+    try {
+      final token = await AuthService().getToken();
+      final res = await http.get(Uri.parse('$baseUrl/transactions'),
+          headers: {'Authorization': token});
+
+      if (res.statusCode == 200) {
+        return List<TransactionModel>.from(
+          jsonDecode(res.body)['data'].map(
+            (transaction) => TransactionModel.fromJson(transaction),
+          ),
+        ).toList();
+      }
+      throw jsonDecode(res.body)['message'];
     } catch (e) {
       rethrow;
     }
