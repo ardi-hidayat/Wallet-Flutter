@@ -61,10 +61,11 @@ class TransactionService {
     }
   }
 
-  Future<List<TransactionModel>> getTransactions() async {
+  Future<List<TransactionModel>> getTransactions(String limit) async {
     try {
       final token = await AuthService().getToken();
-      final res = await http.get(Uri.parse('$baseUrl/transactions'),
+      final res = await http.get(
+          Uri.parse('$baseUrl/transactions?limit=$limit'),
           headers: {'Authorization': token});
 
       if (res.statusCode == 200) {
